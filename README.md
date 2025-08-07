@@ -1,8 +1,17 @@
 # Churn Prediction Project
+## Classification Report
 
-![GitHub last commit](https://img.shields.io/github/last-commit/username/churn-prediction)
-![GitHub issues](https://img.shields.io/github/issues/username/churn-prediction)
-![GitHub license](https://img.shields.io/github/license/username/churn-prediction)
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.73      | 0.74   | 0.74     | 105     |
+| 1     | 0.71      | 0.69   | 0.70     | 95      |
+
+**Accuracy**: 0.72 (72.00%)
+
+| Metric        | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| Macro Avg     | 0.72      | 0.72   | 0.72     | 200     |
+| Weighted Avg  | 0.72      | 0.72   | 0.72     | 200     |
 
 Welcome to the Churn Prediction Project! This repository contains a machine learning pipeline to predict customer churn and a web application to interact with the model. The project leverages a dataset with customer details to train a predictive model and provides a user-friendly interface for predictions.
 
