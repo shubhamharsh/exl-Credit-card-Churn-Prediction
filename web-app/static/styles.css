@@ -1,0 +1,9 @@
+/* Custom styles to supplement Tailwind CSS */
+body {
+    background: linear-gradient(to bottom, #e0e7ff, #f3f4f6);
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}

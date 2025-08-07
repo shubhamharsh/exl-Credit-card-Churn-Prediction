@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-indigo-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="h-10 mr-4">
+                <h1 class="text-2xl font-bold">Customer Churn Prediction</h1>
+            </div>
+            <a href="https://github.com/username/churn-prediction" class="hover:underline" target="_blank">GitHub Repo</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg mx-auto">
+            <h2 class="text-xl font-semibold mb-4 text-center">Enter Customer Details</h2>
+            <form action="/predict" method="POST" class="space-y-4">
+                <div>
+                    <label for="CustomerID" class="block text-sm font-medium text-gray-700">Customer ID</label>
+                    <input type="text" id="CustomerID" name="CustomerID" placeholder="e.g., CUST1234"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="Gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="Gender" name="Gender" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="Age" class="block text-sm font-medium text-gray-700">Age</label>
+                    <input type="number" id="Age" name="Age" placeholder="e.g., 35" min="18" max="100"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="Tenure" class="block text-sm font-medium text-gray-700">Tenure (years)</label>
+                    <input type="number" id="Tenure" name="Tenure" placeholder="e.g., 3" min="0"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="Balance" class="block text-sm font-medium text-gray-700">Balance</label>
+                    <input type="number" id="Balance" name="Balance" placeholder="e.g., 50000" step="0.01" min="0"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="NumOfProducts" class="block text-sm font-medium text-gray-700">Number of Products</label>
+                    <input type="number" id="NumOfProducts" name="NumOfProducts" placeholder="e.g., 2" min="1"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="HasCrCard" class="block text-sm font-medium text-gray-700">Has Credit Card</label>
+                    <select id="HasCrCard" name="HasCrCard" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="IsActiveMember" class="block text-sm font-medium text-gray-700">Is Active Member</label>
+                    <select id="IsActiveMember" name="IsActiveMember" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="EstimatedSalary" class="block text-sm font-medium text-gray-700">Estimated Salary</label>
+                    <input type="number" id="EstimatedSalary" name="EstimatedSalary" placeholder="e.g., 60000" step="0.01" min="0"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Predict Churn</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

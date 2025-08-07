@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-indigo-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="h-10 mr-4">
+                <h1 class="text-2xl font-bold">Customer Churn Prediction</h1>
+            </div>
+            <a href="https://github.com/username/churn-prediction" class="hover:underline" target="_blank">GitHub Repo</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg mx-auto">
+            <h2 class="text-xl font-semibold mb-4 text-center">Prediction Result</h2>
+            {% if result.error %}
+                <p class="text-red-600 font-bold text-center">{{ result.error }}</p>
+            {% else %}
+                <div class="space-y-2">
+                    <p><strong>Customer ID:</strong> {{ result.CustomerID }}</p>
+                    <p><strong>Predicted Churn:</strong> 
+                        {% if result.PredictedChurn == 1 %}
+                            <span class="text-red-600 font-bold">Yes</span>
+                        {% else %}
+                            <span class="text-green-600 font-bold">No</span>
+                        {% endif %}
+                    </p>
+                    <p><strong>Churn Probability:</strong> {{ result.ChurnProbability }}%</p>
+                </div>
+            {% endif %}
+            <a href="/" class="block mt-4 text-center bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>
