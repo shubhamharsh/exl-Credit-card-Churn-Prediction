@@ -20,7 +20,7 @@ Welcome to the Churn Prediction Project! This repository contains a machine lear
 | **Category**         | **Details**                              |
 |-----------------------|------------------------------------------|
 | **Project Name**      | Churn Prediction Project                 |
-| **Repository**        | [https://github.com/username/churn-prediction](https://github.com/username/churn-prediction) |
+| **Repository**        | [REpo LInk]([https://github.com/username/churn-prediction](https://github.com/shubhamharsh/exl-Credit-card-Churn-Prediction.git)) |
 | **Last Updated**      | August 08, 2025, 01:03 AM IST            |
 | **Language/Tools**    | Python, Flask, Pandas, Scikit-learn, Tailwind CSS |
 | **Dependencies**      | pandas, numpy, scikit-learn, joblib, Flask |
