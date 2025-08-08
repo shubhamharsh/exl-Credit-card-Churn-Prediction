@@ -1,4 +1,4 @@
-    Age,Tenure,Balance,NumOfProducts,HasCrCard,IsActiveMember,EstimatedSalary,Churn,Gender_Male
+Age,Tenure,Balance,NumOfProducts,HasCrCard,IsActiveMember,EstimatedSalary,Churn,Gender_Male
 56.0,4.0,0.0,4.0,0,0,40282.42,1,True
 28.0,8.0,67408.01,4.0,0,1,27333.51,0,False
 47.0,6.0,1154.97,1.0,0,1,99514.91,1,False
